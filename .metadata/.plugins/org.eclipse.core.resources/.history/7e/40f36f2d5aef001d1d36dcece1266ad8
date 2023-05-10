@@ -1,0 +1,101 @@
+package com.devsuperior.dslist.entities;
+
+import org.springframework.beans.BeanUtils;
+
+public class GameDTO {
+
+	private Long Id;
+	private String title;
+	private Integer year;
+	private String genre;
+	private String platforms;
+	private Double score;
+	private String imgUrl;
+	private String shortDescription;
+	private String longDescription;
+	
+	public GameDTO() {
+	}
+	
+	public GameDTO(Game entity) {
+		
+		//copia as propriedades do objeto de origem para o objeto de destino, 
+		//onde o nome da propriedade é o mesmo em ambos os objetos.
+		//porem para isso funciona no DTO se faz nescessario o uso dos getters e setters.
+		BeanUtils.copyProperties(entity, this);
+	}
+
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public void setYear(Integer year) {
+		this.year = year;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public String getPlatforms() {
+		return platforms;
+	}
+
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
+	}
+
+	public Double getScore() {
+		return score;
+	}
+
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public String getLongDescription() {
+		return longDescription;
+	}
+
+	public void setLongDescription(String longDescription) {
+		this.longDescription = longDescription;
+	}
+	
+	
+}
