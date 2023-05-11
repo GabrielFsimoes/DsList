@@ -6,12 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="GameMinDTO"/>
+		<item key="selection" value="list"/>
 		<list key="findhistory">
+			<item value="gameList"/>
 			<item value="GameMinDto"/>
 			<item value="platform"/>
 		</list>
 		<list key="replacehistory">
+			<item value="list"/>
 			<item value="GameMinDTO"/>
 			<item value="platforms"/>
 		</list>
